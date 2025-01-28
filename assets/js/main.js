@@ -1,11 +1,3 @@
-/**
-* Template Name: Mentor
-* Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
-* Updated: Aug 07 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 (function() {
   "use strict";
 
@@ -148,4 +140,37 @@ document.addEventListener('DOMContentLoaded', function() {
   // Try to play on load and after user interaction
   playVideo();
   document.addEventListener('click', playVideo, { once: true });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const video = document.querySelector('.hero-video');
+  
+  // Existing video functionality
+  const playVideo = () => {
+      video.play().catch(error => {
+          console.log('Autoplay was prevented:', error);
+      });
+  };
+  
+  playVideo();
+  document.addEventListener('click', playVideo, { once: true });
+
+  // Added Updates Functionality
+  const updatesWrapper = document.querySelector('.updates-wrapper');
+  
+  // Clone update items for seamless scrolling
+  const updateItems = document.querySelectorAll('.update-item');
+  updateItems.forEach(item => {
+      const clone = item.cloneNode(true);
+      updatesWrapper.appendChild(clone);
+  });
+
+  // Pause animation on hover
+  updatesWrapper.addEventListener('mouseenter', () => {
+      updatesWrapper.style.animationPlayState = 'paused';
+  });
+
+  updatesWrapper.addEventListener('mouseleave', () => {
+      updatesWrapper.style.animationPlayState = 'running';
+  });
 });
