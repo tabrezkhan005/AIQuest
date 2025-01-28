@@ -923,6 +923,71 @@ section,
   }
 }
 
+
+.updates-container {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 0;
+}
+
+.updates-wrapper {
+  display: flex;
+  animation: scroll 20s linear infinite;
+  white-space: nowrap;
+}
+
+.update-item {
+  display: inline-block;
+  padding: 8px 20px;
+  margin: 0 20px;
+  background: rgba(205, 144, 78, 0.2);
+  border-radius: 20px;
+  font-size: 1rem;
+  backdrop-filter: blur(5px);
+}
+
+.update-item a{
+  color: #fff;
+}
+
+.update-item a:hover {
+  color: #cd904e;
+}
+
+.update-item:hover {
+  background-color: #5f5444;
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+/* Pause animation on hover */
+.updates-wrapper:hover {
+  animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+  .updates-container {
+      bottom: 10px;
+  }
+  
+  .update-item {
+      font-size: 0.9rem;
+      padding: 6px 15px;
+  }
+}
+
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
