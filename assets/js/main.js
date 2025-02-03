@@ -174,3 +174,28 @@ document.addEventListener('DOMContentLoaded', function() {
       updatesWrapper.style.animationPlayState = 'running';
   });
 });
+
+// Hidden faculty
+document.addEventListener('DOMContentLoaded', function() {
+  const moreFaculty = document.getElementById('more-faculty');
+  const showMoreBtn = document.getElementById('showMoreBtn');
+  let isExpanded = false;
+
+  showMoreBtn.addEventListener('click', function() {
+      isExpanded = !isExpanded;
+      
+      if (isExpanded) {
+          moreFaculty.style.display = 'flex';
+          showMoreBtn.textContent = 'Show Less';
+          
+          // Optional: Smooth scroll to newly displayed faculty
+          moreFaculty.scrollIntoView({ behavior: 'smooth' });
+      } else {
+          moreFaculty.style.display = 'none';
+          showMoreBtn.textContent = 'Show More Faculty';
+          
+          // Optional: Scroll back to initial faculty section
+          document.getElementById('initial-faculty').scrollIntoView({ behavior: 'smooth' });
+      }
+  });
+});
