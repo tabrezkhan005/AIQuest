@@ -1330,6 +1330,20 @@ section,
   margin: 0 2px;
 }
 
+.hidden-faculty {
+  transition: all 0.3s ease;
+}
+
+.btn-primaryy {
+  padding: 10px 20px;
+  margin: 20px 0;
+  color: #fff;
+  background-color: #967705;
+}
+
+.btn-primaryy:hover {
+  background-color: #cfbc2c;
+}
 /*--------------------------------------------------------------
 # About Us Section
 --------------------------------------------------------------*/
