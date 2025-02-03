@@ -1278,7 +1278,7 @@ section,
 # Trainers Index Section
 --------------------------------------------------------------*/
 .trainers-index .member {
-  background-color: var(--surface-color);
+  background-color: whitesmoke;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
   text-align: center;
   margin-bottom: 20px;
